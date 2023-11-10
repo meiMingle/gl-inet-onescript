@@ -271,7 +271,7 @@ set_glfan_temp() {
 }
 
 rollback_old_version() {
-	download_url="https://github.com/wukongdaily/gl-inet-onescript/raw/1f25c161512e9b416227f60656e8c2139c993f69/gl-inet.run"
+	download_url="https://gh-proxy.com/https://github.com/wukongdaily/gl-inet-onescript/raw/1f25c161512e9b416227f60656e8c2139c993f69/gl-inet.run"
 	local_file_path="/tmp/gl-inet.run"
 	wget -O "$local_file_path" "$download_url"
 	chmod +x "$local_file_path"
@@ -284,17 +284,17 @@ recovery_opkg_settings() {
 	case "$router_name" in
 	*3000*)
 		echo "Router name contains '3000'."
-		mt3000_opkg="https://raw.githubusercontent.com/wukongdaily/gl-inet-onescript/master/mt-3000/distfeeds.conf"
+		mt3000_opkg="https://gh-proxy.com/https://raw.githubusercontent.com/wukongdaily/gl-inet-onescript/master/mt-3000/distfeeds.conf"
 		wget -O /etc/opkg/distfeeds.conf ${mt3000_opkg}
 		;;
 	*2500*)
 		echo "Router name contains '2500'."
-		mt2500a_opkg="https://raw.githubusercontent.com/wukongdaily/gl-inet-onescript/master/mt-2500a/distfeeds.conf"
+		mt2500a_opkg="https://gh-proxy.com/https://raw.githubusercontent.com/wukongdaily/gl-inet-onescript/master/mt-2500a/distfeeds.conf"
 		wget -O /etc/opkg/distfeeds.conf ${mt2500a_opkg}
 		;;
 	*6000*)
 		echo "Router name contains '6000'."
-		mt6000_opkg="https://raw.githubusercontent.com/wukongdaily/gl-inet-onescript/master/mt-6000/distfeeds.conf"
+		mt6000_opkg="https://gh-proxy.com/https://raw.githubusercontent.com/wukongdaily/gl-inet-onescript/master/mt-6000/distfeeds.conf"
 		wget -O /etc/opkg/distfeeds.conf ${mt6000_opkg}
 		;;
 	*)
